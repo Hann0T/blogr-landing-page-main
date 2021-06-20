@@ -55,7 +55,6 @@ img {
 	padding-top: 50px;	
 	height: 570px;
 	border-radius: 0 0 0 5em;
-	position: relative;
 	margin-bottom: 120px;
 	position: relative;
 }
@@ -72,7 +71,7 @@ img {
 .main-header__top {
 	margin-bottom: 100px;
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 }
 .main-header__logo {
 	width: 80px;
@@ -108,39 +107,47 @@ img {
 	color: var(--Light-red-CTA-text);
 }
 
+.link--light:hover {
+	background-color: var(--Very-light-red-CTA-hover-background);
+	color: white;
+	border: none;
+}
+.link--transparent:hover {
+	background-color: white;
+	color: var(--Very-light-red-CTA-hover-background);
+}
 
 /* styles for hamburger menu */
 
-.disappear {
-	transform: translateX(-1000px);
-}
-
 .hamburger-menu {
-	height: 600px;
+	height: 400px;
 	background-color: var(--White-text);
 	box-shadow: 0 0 2em rgba(0, 0, 0, .4);
 	border-radius: 10px;
 	padding: 0 20px;
 	position: absolute;
 	inset: 1.5em;
+	z-index: 20;
 	transform: translateY(90px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	transform: translateX(-1000em);
 }
-.hamburger-menu::before {
-	content: url(../images/icon-hamburger.svg);
-	position: fixed;
-	top: -80px;
+.hamburger-menu--height-fixed {
+	height: 600px;
 }
-.hamburger-menu::after {
-	content: url(../images/icon-close.svg);
+
+.hamburger-controller {
+	width: 32px;
+	height: 18px;
 	position: absolute;
-	top: -4em;
 	right: 0;
+	top: 0;
+}
+.hamburger-controller img {
+	width: 100%;
 }
 
 .hamburger-menu__item {
@@ -165,7 +172,7 @@ img {
 .hamburger-menu__item::after {
 	content: url(../images/icon-arrow-dark.svg);
 	position: absolute;
-	right: 5em;
+	right: 3.7em;
 	top: 0;
 }
 
@@ -178,6 +185,9 @@ img {
 }
 .hamburger-menu__link:nth-child(1) {
 	margin-top: 30px;
+}
+.hamburger-menu__link:hover {
+	font-weight: 700;
 }
 
 /* conditions for the hamburger menu */
@@ -228,11 +238,18 @@ ul[class~="active"]::after {
 	color: var(--Very-dark-grayish-blue-body-copy);
 }
 .button--Login:hover {
-	background-color: #eee;
+	background-color: var(--Very-light-red-CTA-hover-background);
+	color: white;
 }
 .button--SignUp {
 	background: linear-gradient(to right, hsl(13, 100%, 72%) , hsl(353, 100%, 62%));
 	color: var(--White-text);
+}
+.button--SignUp:hover {
+	padding: calc(1.1em - 1px);
+	background: white;
+	color: var(--Very-light-red-CTA-hover-background);
+	border: 1px solid var(--Very-light-red-CTA-hover-background);
 }
 
 /* styles for the main content */
@@ -324,7 +341,11 @@ ul[class~="active"]::after {
 .main-footer__link:nth-child(1) {
 	margin-top: 20px;
 }
+.main-footer__link:hover {
+	text-decoration: underline;
+}
 
-
-
+.hidden {
+	display: none;
+}
 

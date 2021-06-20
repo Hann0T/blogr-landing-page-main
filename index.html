@@ -11,8 +11,10 @@
 	<header class="main-header padding-setter">
 		<section class="main-header__top">
 			<img src="./images/logo.svg" alt="Logo de Blogr" class="main-header__logo">
-			<nav class="main-header__menu hamburger-menu">
-				<ul class="hamburger-menu__item active">
+			<div class="hamburger-controller controller-open"><img src="./images/icon-hamburger.svg" alt="hamburger controller open"></div>
+			<div class="hamburger-controller controller-close hidden"><img src="./images/icon-close.svg" alt="hamburger controller close"></div>
+			<nav class="main-header__menu hamburger-menu hidden">
+				<ul class="hamburger-menu__item ">
 					Product
 					<li class="hamburger-menu__link"><a href="#">Overview</a></li>	
 					<li class="hamburger-menu__link"><a href="#">Pricing</a></li>	
@@ -43,8 +45,8 @@
 			<h1 class="main-header__title">A modern publishing platform</h1>
 			<p class="main-header__description">Grow your audience and build your online brand</p>
 			<div class="main-header__linksContainer">
-				<a href="#" class="main-header__link link--Start">Start for Free</a>
-				<a href="#" class="main-header__link link--LearnMore">Learn More</a>
+				<a href="#" class="main-header__link link--Start link--light">Start for Free</a>
+				<a href="#" class="main-header__link link--LearnMore link--transparent">Learn More</a>
 			</div>
 		</section>
 	</header>
@@ -116,5 +118,6 @@
 
 	</footer>
 
+<script src="./JS/index.js"></script>
 </body>
 </html>
